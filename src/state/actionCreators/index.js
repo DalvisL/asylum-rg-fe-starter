@@ -8,6 +8,7 @@ import {
   SET_VISUALIZATION_DATA,
   RESET_VISUALIZATION_QUERY,
   SET_HEAT_MAP_YEARS,
+  SET_DATA_TO_USE,
 } from '../actionTypes';
 
 export const setVisualizationData = (view, office, data) => {
@@ -40,5 +41,13 @@ export const setHeatMapYears = (view, office, idx, year) => {
       idx,
       year,
     },
+  };
+};
+
+// will save data to the redux store for the session
+export const setDataToUse = data => {
+  return {
+    type: SET_DATA_TO_USE,
+    payload: data,
   };
 };
